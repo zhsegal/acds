@@ -1,0 +1,20 @@
+body{
+
+    font-family: 'Secular One', sans-serif;
+}
+
+.form-check{
+    font-size: 120%;  
+};
+
+label span{
+    display:inline-block;
+    margin-left: 10px;
+  }
+
+.col-sm-2 {
+    float: right !important;
+}
+
+h2 {float: right;}
+

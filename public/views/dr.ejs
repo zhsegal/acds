@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheba Allergy Test</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href='index.css'>
+</head>
+
+<body>
+    <section>
+        <div class="container p-3 my-3 bg-secondary text-white ">
+            <img src='images/sheba.png' class='text-center'>
+            <div class="row justify-content-center mt-5 ">
+                <div class="col-l-12 center-block text-center">
+                    <h1>הערכת אטופיק דרמטיטיס -צד רופא</h1>
+                    <h1> מחלקה עור, ביה"ח שיבא </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mt-5 p-3 my-3 border  bg-light text-dark">
+        <h2>תשובות מטופל - ADCT שאלון</h2>
+
+        <form id="ADCRdrForm" method="post" action="/dr">
+            <div class="form-group row mt-5 justify-content-end ">
+
+                <div class="col-4 mt-3">
+                    <input type="text" class="form-control" id="PatientID" name="PatientID" placeholder="">
+                </div>
+                <label for="PatientID" class="col-4 col-form-label text-right mt-3">ת"ז מטופל</label>
+            </div>
+
+            <!-- send button -->
+
+            <div class="form-group row justify-content-center mt-5" id="submit-button">
+                <div class="col-sm-12 text-center">
+                    <button type="submit" class="btn btn-primary">שלח</button>
+                </div>
+            </div>
+
+        </form>
+
+        <div class="container mt-5 p-3 my-3  bg-white ">
+            <div>
+                <h3> תז מטופל : <%= id%> </h2>
+                <p>עוצמת גרד : <%= q1%> <br>
+                 מספר תלונות : <%= q2%></p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src='index.js' charset="utd-8"></script>
+
+</body>
+
+</html>
