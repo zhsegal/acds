@@ -61,9 +61,27 @@ app.post('/send', (req, res) => {
 app.post('/dr', (req, res) => {
    
     Patient.findOne({PatientID: req.body.PatientID}, (err,patient) =>{
+        
+        try{
         console.log(patient)
-        res.render('dr',{id: patient.PatientID,q1: patient.q1,q2:patient.q2});
-        ; 
+        res.render('dr',{id: patient.PatientID,
+            q1: patient.q1,
+            q2:patient.q2,
+            q3: patient.q3,
+            q4: patient.q4,
+            q5: patient.q5,
+            q6: patient.q6});
+        }catch(error){
+            res.render('dr',{id: 'לא נמצא מידע',
+                q1: 'לא נמצא מידע',
+                q2:'לא נמצא מידע',
+                q3: 'לא נמצא מידע',
+                q4: 'לא נמצא מידע',
+                q5: 'לא נמצא מידע',
+                q6: 'לא נמצא מידע'});
+
+
+        }
     });
       
     
